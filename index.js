@@ -246,36 +246,18 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-// function get20s(array) {
-//   const cent = [];
-//   for(let i = 0; i < array.length; i++){
-//     if(array.years >= '1900' && array.years <= '2000'){
-//       cent.array.split(' ');
-//     }
-//   }
-//   return cent;
-// }
-//----------------------------------
-// function get20s(array) {
-//   for(let i = 0; i < array.length; i++){
-//     if(array.years >= '1900' && array.years <= '2000'){
-//     array.toString();
-//     }
-//   }
-//   return array.name
-// }
-//----------------------------------------
 function get20s(array) {
-  const args = [];
+  let args = [];
   for(let i = 0; i < array.length; i++){
     if(array[i].years >= '1900' && array[i].years <= '2000'){
-      args.push(array[i]);
+      args.push(`${array[i].name}`)
     }
   }
-  return args.name;
+  return args;
 }
 
 console.log('task 4:', get20s(artists));
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -335,21 +317,11 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-// function lotsOfArt(array) {
-//   const result = [];
-//   for(let i = 0; i < array.length; i++){
-//     if(array[i]['paintings'] >= 100){
-//       artNum.push(array[i]);
-//     }
-//   }
-//   return array.name;
-// }
-//-----------------------------------
 function lotsOfArt(array) {
   let result = [];
   for(let i = 0; i < array.length; i++){
     if(array[i].paintings >= 100){
-      result.push(`${array.name}`)
+      result.push(`${array[i].name}`)
     }
   }
   return result;
